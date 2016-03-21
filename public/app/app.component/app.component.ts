@@ -5,7 +5,7 @@ import { HeroService } from './../services/hero.service.ts';
 import { DashboardComponent } from './../dashboard.component/dashboard.component.ts';
 import { HeroesComponent } from './../heroes.component/heroes.component.ts';
 import { HeroDetailComponent } from './../hero-detail.component/hero-detail.component.ts';
-
+import { HighlightComponent } from './../highlight.component';
 @Component({
     selector: 'my-app',
     template: `
@@ -13,6 +13,7 @@ import { HeroDetailComponent } from './../hero-detail.component/hero-detail.comp
     <nav>
       <a [routerLink]="['Dashboard']">Dashboard</a>
       <a [routerLink]="['Heroes']">Heroes</a>
+      <a [routerLink]="['Highlight']">Highlight</a>
     </nav>
     <router-outlet></router-outlet>
   `,
@@ -39,6 +40,11 @@ import { HeroDetailComponent } from './../hero-detail.component/hero-detail.comp
         path: '/heroes',
         name: 'Heroes',
         component: HeroesComponent
+    },
+    {
+        path: '/highlight',
+        name: 'Highlight',
+        component: HighlightComponent
     }
 ])
 export class AppComponent {
