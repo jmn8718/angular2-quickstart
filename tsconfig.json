@@ -4,12 +4,15 @@
     "module": "system",
     "moduleResolution": "node",
     "sourceMap": true,
-    "outDir": "./public/app/",
+//    "outDir": "./public/app/",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
+    "removeComments": true,
     "noImplicitAny": false
   },
+  "include":[
+    "public/app"
+  ],
   "exclude": [
     "node_modules",
     "typings/main",

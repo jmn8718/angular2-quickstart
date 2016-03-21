@@ -40,6 +40,8 @@
     "node",
     "express",
     "angular2",
-    "angular"
+    "angular",
+    "typescript",
+    "javascript"
   ]
 }
