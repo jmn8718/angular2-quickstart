@@ -7,6 +7,7 @@ import { HeroesComponent } from '../heroes.component/heroes.component.ts';
 import { HeroDetailComponent } from '../hero-detail.component/hero-detail.component.ts';
 import { HighlightComponent } from '../highlight.component';
 import { LittleTourComponent } from '../little-tour.component';
+import { HeroFormComponent } from '../hero-form/hero-form.component.ts';
 
 @Component({
     selector: 'my-app',
@@ -17,6 +18,7 @@ import { LittleTourComponent } from '../little-tour.component';
       <a [routerLink]="['Heroes']">Heroes</a>
       <a [routerLink]="['Highlight']">Highlight</a>
       <a [routerLink]="['LittleTour']">Little Tour</a>
+      <a [routerLink]="['HeroForm']">Hero Form</a>
     </nav>
     <router-outlet></router-outlet>
   `,
@@ -53,6 +55,11 @@ import { LittleTourComponent } from '../little-tour.component';
         path: '/little_tour',
         name: 'LittleTour',
         component: LittleTourComponent
+    },
+    {
+        path: '/hero_form',
+        name: 'HeroForm',
+        component: HeroFormComponent
     }
 ])
 export class AppComponent {
