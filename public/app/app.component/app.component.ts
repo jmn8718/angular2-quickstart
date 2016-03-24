@@ -1,11 +1,13 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
-import { HeroService } from './../services/hero.service.ts';
-import { DashboardComponent } from './../dashboard.component/dashboard.component.ts';
-import { HeroesComponent } from './../heroes.component/heroes.component.ts';
-import { HeroDetailComponent } from './../hero-detail.component/hero-detail.component.ts';
-import { HighlightComponent } from './../highlight.component';
+import { HeroService } from '../services/hero.service.ts';
+import { DashboardComponent } from '../dashboard.component/dashboard.component.ts';
+import { HeroesComponent } from '../heroes.component/heroes.component.ts';
+import { HeroDetailComponent } from '../hero-detail.component/hero-detail.component.ts';
+import { HighlightComponent } from '../highlight.component';
+import { LittleTourComponent } from '../little-tour.component';
+
 @Component({
     selector: 'my-app',
     template: `
@@ -14,6 +16,7 @@ import { HighlightComponent } from './../highlight.component';
       <a [routerLink]="['Dashboard']">Dashboard</a>
       <a [routerLink]="['Heroes']">Heroes</a>
       <a [routerLink]="['Highlight']">Highlight</a>
+      <a [routerLink]="['LittleTour']">Little Tour</a>
     </nav>
     <router-outlet></router-outlet>
   `,
@@ -45,6 +48,11 @@ import { HighlightComponent } from './../highlight.component';
         path: '/highlight',
         name: 'Highlight',
         component: HighlightComponent
+    },
+    {
+        path: '/little_tour',
+        name: 'LittleTour',
+        component: LittleTourComponent
     }
 ])
 export class AppComponent {
