@@ -2,6 +2,7 @@ import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
 import { HeroService } from '../services/hero.service.ts';
+import { Logger } from '../services/logger.service'
 import { DashboardComponent } from '../dashboard.component/dashboard.component.ts';
 import { HeroesComponent } from '../heroes.component/heroes.component.ts';
 import { HeroDetailComponent } from '../hero-detail.component/hero-detail.component.ts';
@@ -26,7 +27,8 @@ import { HeroFormComponent } from '../hero-form/hero-form.component.ts';
     directives: [ROUTER_DIRECTIVES],
     providers: [
         ROUTER_PROVIDERS,
-        HeroService
+        HeroService,
+        Logger
     ]
 })
 @RouteConfig([
