@@ -1,9 +1,9 @@
 import {Component} from 'angular2/core';
 import {EditItem} from './edit-item';
-import {HeroesService} from './heroes.service.ts';
-import {HeroCardComponent} from './../hero/hero-card.component.ts';
-import {HeroEditorComponent} from './hero-editor.component.ts';
-import {Hero} from './hero-with-powers';
+import {HeroesService} from './heroes.service';
+import {HeroCardComponent} from './hero-card.component';
+import {HeroEditorComponent} from './hero-editor.component';
+import {Hero} from './hero';
 
 @Component({
     selector: 'heroes-list',
@@ -37,10 +37,12 @@ export class HeroesListComponent {
         this.heroes = heroesService.getHeroes()
             .map(item => new EditItem(item));
     }
+
     onSaved (editItem: EditItem<Hero>, updatedHero: Hero) {
         editItem.item = updatedHero;
         editItem.editing = false;
     }
+
     onCanceled (editItem: EditItem<Hero>) {
         editItem.editing = false;
     }

@@ -14,6 +14,9 @@ import { TohComponent } from  '../toh.component/toh.component';
 import { WikiComponent } from '../wiki/wiki.component';
 import { WikiSmartComponent } from '../wiki/wiki-smart.component';
 
+import { HeroesService } from '../hero-editor/heroes.service';
+import { HeroesListComponent } from '../hero-editor/hero-list.component';
+
 @Component({
     selector: 'my-app',
     template: `
@@ -24,6 +27,7 @@ import { WikiSmartComponent } from '../wiki/wiki-smart.component';
       <a [routerLink]="['Highlight']">Highlight</a>
       <a [routerLink]="['LittleTour']">Little Tour</a>
       <a [routerLink]="['HeroForm']">Hero Form</a>
+      <a [routerLink]="['HeroEditor']">Hero Editor</a>
       <a [routerLink]="['Toh']">Toh</a>
       <a [routerLink]="['Wiki']">Wiki</a>
       <a [routerLink]="['WikiSmart']">WikiSmart</a>
@@ -35,6 +39,7 @@ import { WikiSmartComponent } from '../wiki/wiki-smart.component';
     providers: [
         ROUTER_PROVIDERS,
         HeroService,
+        HeroesService,
         Logger,
         HeroRealService
     ]
@@ -70,6 +75,11 @@ import { WikiSmartComponent } from '../wiki/wiki-smart.component';
         path: '/hero_form',
         name: 'HeroForm',
         component: HeroFormComponent
+    },
+    {
+        path: '/hero_editor',
+        name: 'HeroEditor',
+        component: HeroesListComponent
     },
     {
         path: '/toh',
