@@ -9,6 +9,8 @@ import { HeroDetailComponent } from '../hero-detail.component/hero-detail.compon
 import { HighlightComponent } from '../highlight.component';
 import { LittleTourComponent } from '../little-tour.component';
 import { HeroFormComponent } from '../hero-form/hero-form.component.ts';
+import { HeroRealService } from '../toh.component/hero-observable.service.ts';
+import { TohComponent } from  '../toh.component/toh.component'
 
 @Component({
     selector: 'my-app',
@@ -20,6 +22,7 @@ import { HeroFormComponent } from '../hero-form/hero-form.component.ts';
       <a [routerLink]="['Highlight']">Highlight</a>
       <a [routerLink]="['LittleTour']">Little Tour</a>
       <a [routerLink]="['HeroForm']">Hero Form</a>
+      <a [routerLink]="['Toh']">Toh</a>
     </nav>
     <router-outlet></router-outlet>
   `,
@@ -28,7 +31,8 @@ import { HeroFormComponent } from '../hero-form/hero-form.component.ts';
     providers: [
         ROUTER_PROVIDERS,
         HeroService,
-        Logger
+        Logger,
+        HeroRealService
     ]
 })
 @RouteConfig([
@@ -62,6 +66,11 @@ import { HeroFormComponent } from '../hero-form/hero-form.component.ts';
         path: '/hero_form',
         name: 'HeroForm',
         component: HeroFormComponent
+    },
+    {
+        path: '/toh',
+        name: 'Toh',
+        component: TohComponent
     }
 ])
 export class AppComponent {
