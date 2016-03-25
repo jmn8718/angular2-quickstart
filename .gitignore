@@ -1,6 +1,7 @@
 .idea
 node_modules
 public/app/**/*.js
+/npm-debug.log
 public/app/**/*.map
 typings/**/
 typings/*.ts
