@@ -4,13 +4,15 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 import { HeroService } from '../services/hero.service.ts';
 import { Logger } from '../services/logger.service'
 import { DashboardComponent } from '../dashboard.component/dashboard.component.ts';
-import { HeroesComponent } from '../heroes.component/heroes.component.ts';
-import { HeroDetailComponent } from '../hero-detail.component/hero-detail.component.ts';
+import { HeroesComponent } from '../hero/heroes.component/heroes.component.ts';
+import { HeroDetailComponent } from '../hero/hero-detail.component/hero-detail.component.ts';
 import { HighlightComponent } from '../highlight.component';
 import { LittleTourComponent } from '../little-tour.component';
-import { HeroFormComponent } from '../hero-form/hero-form.component.ts';
+import { HeroFormComponent } from '../hero/hero-form/hero-form.component.ts';
 import { HeroRealService } from '../toh.component/hero-observable.service.ts';
-import { TohComponent } from  '../toh.component/toh.component'
+import { TohComponent } from  '../toh.component/toh.component';
+import { WikiComponent } from '../wiki/wiki.component';
+import { WikiSmartComponent } from '../wiki/wiki-smart.component';
 
 @Component({
     selector: 'my-app',
@@ -23,6 +25,8 @@ import { TohComponent } from  '../toh.component/toh.component'
       <a [routerLink]="['LittleTour']">Little Tour</a>
       <a [routerLink]="['HeroForm']">Hero Form</a>
       <a [routerLink]="['Toh']">Toh</a>
+      <a [routerLink]="['Wiki']">Wiki</a>
+      <a [routerLink]="['WikiSmart']">WikiSmart</a>
     </nav>
     <router-outlet></router-outlet>
   `,
@@ -71,6 +75,16 @@ import { TohComponent } from  '../toh.component/toh.component'
         path: '/toh',
         name: 'Toh',
         component: TohComponent
+    },
+    {
+        path: '/wiki',
+        name: 'Wiki',
+        component: WikiComponent
+    },
+    {
+        path: '/wikismart',
+        name: 'WikiSmart',
+        component: WikiSmartComponent
     }
 ])
 export class AppComponent {
