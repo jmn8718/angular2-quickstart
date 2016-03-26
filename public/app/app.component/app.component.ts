@@ -21,6 +21,7 @@ import { HeroBirthday2Component } from '../hero/hero-birthday.component/hero-bir
 import { PowerBoosterComponent } from '../power-booster/power-booster.component';
 import { PowerBoostCalculatorComponent } from '../power-booster/power-boost-calculator.component';
 import { FlyingHeroesComponent, FlyingHeroesImpureComponent } from '../hero/flying-heroes.component/flying-heroes.component';
+import { HeroAsyncMessageComponent } from '../hero/hero-async.component/hero-async.component';
 
 @Component({
     selector: 'my-app',
@@ -37,6 +38,7 @@ import { FlyingHeroesComponent, FlyingHeroesImpureComponent } from '../hero/flyi
       <a [routerLink]="['HeroBirthday2']">Hero Birthday2</a>
       <a [routerLink]="['FlyingHeroes']">Flying heroes</a>
       <a [routerLink]="['FlyingHeroesImpure']">Flying heroes impure</a>
+      <a [routerLink]="['HeroAsync']">Hero Async</a>
       <a [routerLink]="['Toh']">Toh</a>
       <a [routerLink]="['Wiki']">Wiki</a>
       <a [routerLink]="['WikiSmart']">WikiSmart</a>
@@ -111,6 +113,11 @@ import { FlyingHeroesComponent, FlyingHeroesImpureComponent } from '../hero/flyi
         path: '/flying_heroes_impure',
         name: 'FlyingHeroesImpure',
         component: FlyingHeroesImpureComponent
+    },
+    {
+        path: '/hero_async',
+        name: 'HeroAsync',
+        component: HeroAsyncMessageComponent
     },
     {
         path: '/toh',
