@@ -16,6 +16,11 @@ import { WikiSmartComponent } from '../wiki/wiki-smart.component';
 
 import { HeroesService } from '../hero-editor/heroes.service';
 import { HeroesListComponent } from '../hero-editor/hero-list.component';
+import { HeroBirthdayComponent } from '../hero/hero-birthday.component/hero-birthday1.component';
+import { HeroBirthday2Component } from '../hero/hero-birthday.component/hero-birthday2.component';
+import { PowerBoosterComponent } from '../power-booster/power-booster.component';
+import { PowerBoostCalculatorComponent } from '../power-booster/power-boost-calculator.component';
+import { FlyingHeroesComponent, FlyingHeroesImpureComponent } from '../hero/flying-heroes.component/flying-heroes.component';
 
 @Component({
     selector: 'my-app',
@@ -28,9 +33,15 @@ import { HeroesListComponent } from '../hero-editor/hero-list.component';
       <a [routerLink]="['LittleTour']">Little Tour</a>
       <a [routerLink]="['HeroForm']">Hero Form</a>
       <a [routerLink]="['HeroEditor']">Hero Editor</a>
+      <a [routerLink]="['HeroBirthday']">Hero Birthday</a>
+      <a [routerLink]="['HeroBirthday2']">Hero Birthday2</a>
+      <a [routerLink]="['FlyingHeroes']">Flying heroes</a>
+      <a [routerLink]="['FlyingHeroesImpure']">Flying heroes impure</a>
       <a [routerLink]="['Toh']">Toh</a>
       <a [routerLink]="['Wiki']">Wiki</a>
       <a [routerLink]="['WikiSmart']">WikiSmart</a>
+      <a [routerLink]="['PowerBooster']">PowerBooster</a>
+      <a [routerLink]="['PowerBoosterCalculator']">PowerBoosterCalculator</a>
     </nav>
     <router-outlet></router-outlet>
   `,
@@ -82,6 +93,26 @@ import { HeroesListComponent } from '../hero-editor/hero-list.component';
         component: HeroesListComponent
     },
     {
+        path: '/hero_birthday',
+        name: 'HeroBirthday',
+        component: HeroBirthdayComponent
+    },
+    {
+        path: '/hero_birthday2',
+        name: 'HeroBirthday2',
+        component: HeroBirthday2Component
+    },
+    {
+        path: '/flying_heroes',
+        name: 'FlyingHeroes',
+        component: FlyingHeroesComponent
+    },
+    {
+        path: '/flying_heroes_impure',
+        name: 'FlyingHeroesImpure',
+        component: FlyingHeroesImpureComponent
+    },
+    {
         path: '/toh',
         name: 'Toh',
         component: TohComponent
@@ -95,6 +126,16 @@ import { HeroesListComponent } from '../hero-editor/hero-list.component';
         path: '/wikismart',
         name: 'WikiSmart',
         component: WikiSmartComponent
+    },
+    {
+        path: '/power_booster',
+        name: 'PowerBooster',
+        component: PowerBoosterComponent
+    },
+    {
+        path: '/power_booster_calculator',
+        name: 'PowerBoosterCalculator',
+        component: PowerBoostCalculatorComponent
     }
 ])
 export class AppComponent {
