@@ -12,7 +12,14 @@ import {CrisisService}         from './crisis.service';
     providers:  [CrisisService]
 })
 @RouteConfig([
-    {path:'/',    name: 'CrisisList',   component: CrisisListComponent, useAsDefault: true},
-    {path:'/:id', name: 'CrisisDetail', component: CrisisDetailComponent}
+    {   path:'/',
+        name: 'CrisisList',
+        component: CrisisListComponent,
+        useAsDefault: true
+    },
+    {   path:'/:id',
+        name: 'CrisisDetail',
+        component: CrisisDetailComponent
+    }
 ])
 export class CrisisCenterComponent { }
