@@ -3,8 +3,8 @@
 
 #Routes
 You can visit 2 application
--localhost:3000/
--localhost:3000/crisis
+*localhost:3000/
+*localhost:3000/crisis
 
 #Global dependencies
 npm install typescript typings express -g
